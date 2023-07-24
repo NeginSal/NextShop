@@ -1,3 +1,6 @@
+export const metadata={
+  title:'about chess shop'
+}
 const AboutPage = () => {
   return (
     <div>
