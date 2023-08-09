@@ -1,8 +1,30 @@
-const ReposPage = () => {
+import Link from "next/link";
+
+async function fetchProducts() {
+  const response = await fetch('https://fakestoreapi.com/products');
+  const products = await response.json();
+  return products;
+}
+
+const ReposPage = async () => {
+  const products = await fetchProducts();
+
+  console.log(products)
   return (
     <div>
-      <h1>repos</h1>
-      {/* https://fakestoreapi.com/products */}
+      <h1>Products</h1>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            <Link href={`/shop/products/${product.id}`}>
+              <p>{product.title}</p>
+              <p>{product.price}</p>
+            </Link>
+
+          </li>
+        ))}
+      </ul>
+
     </div>
   );
 }
