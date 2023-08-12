@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Games from "./components/Games";
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
         <li><Link href='/about'>About</Link></li>
         <li><Link href='/about/team'>Team</Link></li>
       </ul>
+      <Games />
     </div>
   );
 }

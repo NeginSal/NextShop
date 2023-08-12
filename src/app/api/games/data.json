@@ -1,0 +1,19 @@
+{
+  "games":[
+    {
+      "title":"lorem",
+      "description":"lorem",
+      "id":1
+    },
+    {
+      "title":"lorem",
+      "description":"lorem",
+      "id":2
+    },
+    {
+      "title":"lorem",
+      "description":"lorem",
+      "id":3
+    }
+  ]
+}
