@@ -1,7 +1,11 @@
 async function fetchProductDescription(id) {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
-  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
+    next: {
+      revalidate: 60
+    }
+  });
   const data = await response.json();
   return data;
 }

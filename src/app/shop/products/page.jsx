@@ -1,7 +1,11 @@
 import Link from "next/link";
 
 async function fetchProducts() {
-  const response = await fetch('https://fakestoreapi.com/products');
+  const response = await fetch('https://fakestoreapi.com/products', {
+    next: {
+      revalidate: 60
+    }
+  });
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const products = await response.json();
   return products;
@@ -21,7 +25,6 @@ const ReposPage = async () => {
               <p>{product.title}</p>
               <p>{product.price}</p>
             </Link>
-
           </li>
         ))}
       </ul>

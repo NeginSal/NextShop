@@ -1,5 +1,9 @@
 async function fetchProduct(id) {
-  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
+    next: {
+      revalidate: 60
+    }
+  });
   const data = response.json();
   return data;
 }
