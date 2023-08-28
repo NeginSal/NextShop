@@ -22,7 +22,7 @@ const ReposPage = async () => {
   return (
     <>
       <h1 className="text-center text-violet-800 text-5xl my-5">* PRODUCTS *</h1>
-      <div class="grid grid-cols-1 gap-1 mx-5 lg:grid lg:grid-cols-4 lg:gap-5 lg:m-8">
+      <div class="grid grid-cols-1 gap-1 mx-5 md:grid md:grid-cols-2 md:gap-3 md:m-8 lg:grid lg:grid-cols-4 lg:gap-5 lg:m-8">
         {
           products.map((product) => (
             <div key={product.id} class="p-3 shadow-md h-full border text-center border-purple-300 rounded-xl bg-lime-50">
