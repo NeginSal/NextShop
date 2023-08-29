@@ -17,7 +17,8 @@ const ProductDescription = async ({ id }) => {
   return (
     <>
       <div className="p-10 text-center">
-        <p className="text-cyan-800 text-4xl my-5">product description</p>
+        <p className="text-cyan-800 text-4xl my-5 ">product description</p>
+        <p className="text-blue-600 text-lg text-left border-b-2 border-b-cyan-200 border-dashed my-3">{product.title}</p>
         <p className="text-teal-800 text-2xl text-justify">{product.description}</p>
         <div className="flex justify-center items-center my-10">
           <p className="flex my-3 p-2 rounded-xl bg-purple-300 text-fuchsia-950">

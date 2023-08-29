@@ -14,7 +14,7 @@ const Product = async ({ id }) => {
 
   return (
     <>
-      <div className=" rounded overflow-hidden shadow-lg mx-10">
+      <div className="rounded shadow-lg mx-10">
         <div class="p-3 shadow-md h-full border text-center border-pink-600 rounded-xl bg-lime-50">
           <img src={product.image} className="w-52 h-52 mx-auto my-5 rounded-sm" />
           <p className="truncate my-3 mx-10 text-orange-800 bg-orange-400 p-2 rounded-lg ">
